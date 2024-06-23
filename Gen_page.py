@@ -6,54 +6,54 @@ import random as rd
 
 # st.set_page_config(page_title="Demo for streamlit-calendar", page_icon="📆")
 
-fake_data = '''
-{
-  "Monday": {
-    "8:30-10:00": "Calculus",
-    "14:30-16:00": "Physics",
-    "18:00-20:00": "Write Thesis",
-    "20:00-21:00": "Practice Driving"
-  },
-  "Tuesday": {
-    "9:30-11:00": "Chemistry",
-    "13:30-15:00": "Linear Algebra",
-    "16:00-18:00": "Coding",
-    "18:00-20:00": "Play Ping Pong",
-    "20:00-21:00": "Practice Driving"
-  },
-  "Wednesday": {
-    "8:30-10:00": "Calculus",
-    "14:30-16:00": "Physics",
-    "18:00-20:00": "Write Thesis",
-    "20:00-21:00": "Practice Driving"
-  },
-  "Thursday": {
-    "9:30-11:00": "Chemistry",
-    "13:30-15:00": "Linear Algebra",
-    "16:00-18:00": "Coding",
-    "18:00-20:00": "Play Ping Pong",
-    "20:00-21:00": "Practice Driving"
-  },
-  "Friday": {
-    "9:30-11:00": "Chemistry",
-    "14:30-16:00": "Physics",
-    "18:00-20:00": "Write Thesis",
-    "20:00-21:00": "Practice Driving"
-  },
-  "Saturday": {
-    "10:00-12:00": "Write Thesis",
-    "13:00-16:00": "Coding",
-    "17:00-19:00": "Play Ping Pong",
-    "19:00-20:00": "Practice Driving"
-  },
-  "Sunday": {
-    "10:00-12:00": "Write Thesis",
-    "13:00-16:00": "Coding",
-    "17:00-19:00": "Play Ping Pong",
-    "19:00-20:00": "Practice Driving"
-  }
-}
-'''
+# fake_data = '''
+# {
+#   "Monday": {
+#     "8:30-10:00": "Calculus",
+#     "14:30-16:00": "Physics",
+#     "18:00-20:00": "Write Thesis",
+#     "20:00-21:00": "Practice Driving"
+#   },
+#   "Tuesday": {
+#     "9:30-11:00": "Chemistry",
+#     "13:30-15:00": "Linear Algebra",
+#     "16:00-18:00": "Coding",
+#     "18:00-20:00": "Play Ping Pong",
+#     "20:00-21:00": "Practice Driving"
+#   },
+#   "Wednesday": {
+#     "8:30-10:00": "Calculus",
+#     "14:30-16:00": "Physics",
+#     "18:00-20:00": "Write Thesis",
+#     "20:00-21:00": "Practice Driving"
+#   },
+#   "Thursday": {
+#     "9:30-11:00": "Chemistry",
+#     "13:30-15:00": "Linear Algebra",
+#     "16:00-18:00": "Coding",
+#     "18:00-20:00": "Play Ping Pong",
+#     "20:00-21:00": "Practice Driving"
+#   },
+#   "Friday": {
+#     "9:30-11:00": "Chemistry",
+#     "14:30-16:00": "Physics",
+#     "18:00-20:00": "Write Thesis",
+#     "20:00-21:00": "Practice Driving"
+#   },
+#   "Saturday": {
+#     "10:00-12:00": "Write Thesis",
+#     "13:00-16:00": "Coding",
+#     "17:00-19:00": "Play Ping Pong",
+#     "19:00-20:00": "Practice Driving"
+#   },
+#   "Sunday": {
+#     "10:00-12:00": "Write Thesis",
+#     "13:00-16:00": "Coding",
+#     "17:00-19:00": "Play Ping Pong",
+#     "19:00-20:00": "Practice Driving"
+#   }
+# }
+# '''
 def gen_calendar(llm_out:dict)->None:
     def random_color()->None:
         output = "#"
@@ -115,6 +115,6 @@ def gen_calendar(llm_out:dict)->None:
         key="timegrid"
     )
 
-if __name__ == "__main__":
-    import json
-    gen_calendar(llm_out=json.loads(fake_data))
+# if __name__ == "__main__":
+#     import json
+#     gen_calendar(llm_out=json.loads(fake_data))
