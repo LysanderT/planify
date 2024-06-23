@@ -40,6 +40,11 @@ def run():
         if len(st.session_state.initial_activities) > 1:
             cols[4].button("Delete", key=f"delete_{idx}", on_click=lambda i=idx: delete_activity(i))
 
-    if st.button("Next"):
+
+    col1, _, _, col4 = st.columns(4)
+    if col1.button("Back"):
+        st.session_state.page = "About"
+        st.experimental_rerun()
+    if col4.button("Next"):
         st.session_state.page = "Desired"
         st.experimental_rerun()

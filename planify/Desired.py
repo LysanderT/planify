@@ -33,10 +33,10 @@ def run():
         if len(st.session_state.add_on_activities) > 1:
             cols[3].button("Delete", key=f"addon_delete_{idx}", on_click=lambda i=idx: delete_add_on_activity(i))
 
-    col1, col2 = st.columns(2)
+    col1, _, _, col4 = st.columns(4)
     if col1.button("Back"):
         st.session_state.page = "Initial"
         st.experimental_rerun()
-    if col2.button("Next"):
+    if col4.button("Next"):
         st.session_state.page = "Preferences"
         st.experimental_rerun()

@@ -1,38 +1,38 @@
 import streamlit as st
-from multipage import main
 
-# def main():
-#     st.set_page_config(page_title="Activity Scheduler", layout="wide")
-#     st.title("Activity Scheduler")
-#     st.write("This is a multi-page Streamlit application.")
-#
-#     pages = {
-#         "Initial Activity": "InitialActivity",
-#         "Add-On Activity": "AddOnActivity",
-#         "Preferences": "Preferences",
-#         "Summary": "Summary"
-#     }
-#
-#     if "page" not in st.session_state:
-#         st.session_state.page = "Initial Activity"
-#
-#     st.sidebar.title("Navigation")
-#     choice = st.sidebar.radio("Go to", list(pages.keys()))
-#
-#     st.session_state.page = choice
-#
-#     if st.session_state.page == "Initial Activity":
-#         import InitialActivity
-#         InitialActivity.run()
-#     elif st.session_state.page == "Add-On Activity":
-#         import AddOnActivity
-#         AddOnActivity.run()
-#     elif st.session_state.page == "Preferences":
-#         import Preferences
-#         Preferences.run()
-#     elif st.session_state.page == "Summary":
-#         import Summary
-#         Summary.run()
+
+def main():
+    # st.sidebar.title("Navigation")
+    pages = ["About", "Initial", "Desired", "Preferences", "Plan"]
+    st.markdown("<h1 style='text-align: center;'>Planify</h1>", unsafe_allow_html=True)
+
+    # TODO: modify the display
+    if "page" not in st.session_state:
+        st.session_state.page = "About"
+
+    cols = st.columns(len(pages))
+
+    for i, page in enumerate(pages):
+        if cols[i].button(page):
+            st.session_state.page = page
+            st.experimental_rerun()
+
+    if st.session_state.page == "Initial":
+        import Initial
+        Initial.run()
+    elif st.session_state.page == "Desired":
+        import Desired
+        Desired.run()
+    elif st.session_state.page == "Preferences":
+        import Preferences
+        Preferences.run()
+    elif st.session_state.page == "Plan":
+        import Plan
+        Plan.run()
+    elif st.session_state.page == "About":
+        import About
+        About.run()
+
 
 if __name__ == "__main__":
     main()
