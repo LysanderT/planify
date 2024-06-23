@@ -1,5 +1,8 @@
 # Planify
 
+<img src="logo.png" align="right" alt="Planify logo" width="120" height="120">
+
+
 > A simple and easy-to-use task manager powered by AI.
 
 ## Features
