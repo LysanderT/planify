@@ -38,7 +38,7 @@ def run():
         activity["start_time"] = cols[2].time_input("Start Time", value=activity["start_time"], key=f"start_time_{idx}")
         activity["end_time"] = cols[3].time_input("End Time", value=activity["end_time"], key=f"end_time_{idx}")
         if len(st.session_state.initial_activities) > 1:
-            cols[4].button("Delete", key=f"delete_{idx}", on_click=lambda i=idx: delete_activity(i))
+            cols[4].button("Del", key=f"delete_{idx}", on_click=lambda i=idx: delete_activity(i))
 
 
     col1, _, _, col4 = st.columns(4)

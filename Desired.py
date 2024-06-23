@@ -31,7 +31,7 @@ def run():
         activity["duration"] = cols[2].number_input("Duration (hours)", min_value=0.0, step=0.5,
                                                     key=f"addon_duration_{idx}")
         if len(st.session_state.add_on_activities) > 1:
-            cols[3].button("Delete", key=f"addon_delete_{idx}", on_click=lambda i=idx: delete_add_on_activity(i))
+            cols[3].button("Del", key=f"addon_delete_{idx}", on_click=lambda i=idx: delete_add_on_activity(i))
 
     col1, _, _, col4 = st.columns(4)
     if col1.button("Back"):

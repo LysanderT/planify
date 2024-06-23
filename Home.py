@@ -7,9 +7,9 @@ def main():
 
     logo = Image.open("logo.png")
 
-    cols = st.columns([2, 1])
+    cols = st.columns([1.5, 1])
     cols[1].image(logo, width=100)
-    cols[0].markdown("<h1 style='text-align: right;'>Planify&nbsp&nbsp</h1>", unsafe_allow_html=True)
+    cols[0].markdown("<h1 style='text-align: right;'>&nbsp&nbspPlanify</h1>", unsafe_allow_html=True)
 
     # Display the logo and title side by side
     # st.markdown(

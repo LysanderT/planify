@@ -7,7 +7,7 @@ def run():
                 
     ## About Planify
 
-    Planify is a comprehensive scheduling and planning tool designed to help you manage your current weekly activities, add new tasks, and prioritize your responsibilities efficiently.
+    Planify is a smart and easy-to-use task manager designed to help you manage your current weekly activities, add new tasks, and prioritize your responsibilities efficiently.
 
     #### Features
     - **Initial**: Manually schedule your established activities or import an existing schedule with specific start and end times for each day of the week.

@@ -3,7 +3,7 @@
 <img src="logo.svg" align="right" alt="Planify logo" width="150">
 
 
-A simple and easy-to-use task manager powered by AI.
+A smart and easy-to-use task manager powered by AI.
 
 - **Initial Scheduling**: Manually schedule your established activities or import an existing schedule with specific start and end times for each day of the week.
 - **Task Addition**: Add additional tasks and events, prioritizing their importance and duration.
@@ -69,3 +69,9 @@ For more information on how to configure OpenAI, please refer to the [documentat
     ```bash
     http://localhost:8501/
     ```
+
+
+## Declaration
+
+This is a demo project for the [Berkeley AI Hackathon](https://live.calhacks.io/) and is not intended for commercial use.
+See our devpost [here](https://devpost.com/software/planify-jgwkht#updates) for more information.
