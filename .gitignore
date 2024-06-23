@@ -1,3 +1,5 @@
 openai-env/
 planify/__pycache__/
 .DS_Store
+__pycache__/
+setup.sh

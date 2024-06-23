@@ -51,8 +51,8 @@ def run():
         prefs = st.session_state.preferences
 
     planned_json = generate(json.dumps(schedule), json.dumps(unfixed), json.dumps(prefs))
-    st.json(planned_json)
-    gen_calendar(planned_json)
+    # st.json(planned_json)
+    gen_calendar(json.loads(planned_json))
 
     if st.button("Back"):
         st.session_state.page = "Preferences"
