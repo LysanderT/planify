@@ -1,11 +1,9 @@
 # Planify
 
-<img src="logo.png" align="right" alt="Planify logo" width="120" height="120">
+<img src="logo.svg" align="right" alt="Planify logo" width="120" height="120">
 
 
-> A simple and easy-to-use task manager powered by AI.
-
-## Features
+A simple and easy-to-use task manager powered by AI.
 
 - **Initial Scheduling**: Manually schedule your established activities or import an existing schedule with specific start and end times for each day of the week.
 - **Task Addition**: Add additional tasks and events, prioritizing their importance and duration.
