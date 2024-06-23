@@ -1,7 +1,7 @@
 import streamlit as st
 
 def run():
-    st.title("Preferences")
+    st.title("Update Preferences")
     if "preferences" not in st.session_state:
         st.session_state.preferences = {
             "night_work": 5,
@@ -13,8 +13,8 @@ def run():
 
     col1, col2 = st.columns(2)
     if col1.button("Back"):
-        st.session_state.page = "Add-On Activity"
+        st.session_state.page = "Desired"
         st.experimental_rerun()
     if col2.button("Next"):
-        st.session_state.page = "Summary"
+        st.session_state.page = "Plan"
         st.experimental_rerun()

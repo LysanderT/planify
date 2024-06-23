@@ -1,7 +1,7 @@
 import streamlit as st
 
 def run():
-    st.title("Summary")
+    st.title("My Personal Plan")
 
     schedule = {}
     for activity in st.session_state.initial_activities:
