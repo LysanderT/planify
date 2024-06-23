@@ -26,9 +26,9 @@ def run():
     for idx, activity in enumerate(st.session_state.add_on_activities):
         cols = st.columns([3, 2, 2, 1])
         activity["name"] = cols[0].text_input("Name", value=activity["name"], key=f"addon_name_{idx}")
-        activity["importance"] = cols[1].slider("Importance", 1, 10, value=activity["importance"],
+        activity["importance"] = cols[1].slider("Importance", 0.0, 1.0, 0.5, 0.01,
                                                 key=f"addon_importance_{idx}")
-        activity["duration"] = cols[2].number_input("Duration (hours)", min_value=1, value=activity["duration"],
+        activity["duration"] = cols[2].number_input("Duration (hours)", min_value=0.0, step=0.5,
                                                     key=f"addon_duration_{idx}")
         if len(st.session_state.add_on_activities) > 1:
             cols[3].button("Delete", key=f"addon_delete_{idx}", on_click=lambda i=idx: delete_add_on_activity(i))
