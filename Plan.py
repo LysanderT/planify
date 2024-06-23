@@ -2,6 +2,7 @@ import streamlit as st
 import json
 
 from Client import generate
+from Gen_page import gen_calendar
 
 def run():
     st.title("My Personal Plan")
@@ -51,6 +52,7 @@ def run():
 
     planned_json = generate(json.dumps(schedule), json.dumps(unfixed), json.dumps(prefs))
     st.json(planned_json)
+    gen_calendar(planned_json)
 
     if st.button("Back"):
         st.session_state.page = "Preferences"

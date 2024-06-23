@@ -16,7 +16,6 @@ def main():
         if cols[i].button(page):
             st.session_state.page = page
             st.experimental_rerun()
-
     if st.session_state.page == "Initial":
         import Initial
         Initial.run()
