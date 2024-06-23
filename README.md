@@ -70,6 +70,29 @@ For more information on how to configure OpenAI, please refer to the [documentat
     http://localhost:8501/
     ```
 
+## Usage
+
+After running the application, you will be greeted with the following screen:
+
+![About](images/1.png)
+
+From here, you can navigate to the following tabs to create your schedule:
+
+- **Initial**: Manually schedule your established activities or import an existing schedule with specific start and end times for each day of the week.
+
+![Initial](images/2.png)
+
+- **Addons**: Add additional tasks and events, prioritizing their importance and duration.
+
+![Addons](images/3.png)
+
+- **Prefs**: Update and set your preferences for night work and extra breaks to customize your schedule.
+
+![Prefs](images/4.png)
+
+- **Plan**: Generate and view your created schedule and access a summarized JSON format of your planned activities and tasks.
+
+![Plan](images/5.png)
 
 ## Declaration
 
