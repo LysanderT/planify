@@ -21,8 +21,6 @@ def run(st):
                 time_range = f"{activity['start_time']}-{activity['end_time']}"
                 schedule[day][time_range] = activity["name"]
 
-        # st.json(schedule)
-
     unfixed = {}
     if "add_on_activities" not in stx.session_state:
         pass
@@ -31,32 +29,15 @@ def run(st):
             if activity["name"] == "":
                 continue
             else:
-                # unfixed.append({
-                #     activity["name"]: {
-                #         "importance": activity["importance"],
-                #         "hours": activity["duration"]
-                #     }
-                # })
                 unfixed[activity["name"]] = {
                     "importance": activity["importance"],
                     "hours": activity["duration"]
                 }
 
-        # st.json(unfixed)
-
-    # prefs = {}
-    # if "preferences" not in stx.session_state:
-    #     pass
-    # else:
-    #     prefs = stx.session_state.preferences
     prefs = stx.session_state.preferences["pref"]
 
-    #try:
-    planned_json = generate(json.dumps(schedule), json.dumps(unfixed), prefs)
-    gen_calendar(json.loads(planned_json), st)
-    # except:
-    #     pass
-
-    # if st.button("Back"):
-    #     stx.session_state.page = "Preferences"
-    #     stx.experimental_rerun()
+    try:
+        planned_json = generate(json.dumps(schedule), json.dumps(unfixed), prefs)
+        gen_calendar(json.loads(planned_json), st)
+    except:
+        pass

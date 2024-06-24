@@ -39,12 +39,3 @@ def run(st):
         activity["end_time"] = cols[3].time_input("End Time", value=activity["end_time"], key=f"end_time_{idx}")
         if len(stx.session_state.initial_activities) > 1:
             cols[4].button("Del", key=f"delete_{idx}", on_click=lambda i=idx: delete_activity(i))
-
-
-    # col1, _, _, col4 = st.columns(4)
-    # if col1.button("Back"):
-    #     stx.session_state.page = "About"
-    #     stx.experimental_rerun()
-    # if col4.button("Next"):
-    #     stx.session_state.page = "Desired"
-    #     stx.experimental_rerun()

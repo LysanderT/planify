@@ -1,6 +1,5 @@
 import streamlit as stx
 
-
 def run(st):
     st.title("Add Activities")
 

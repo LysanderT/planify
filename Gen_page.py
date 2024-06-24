@@ -154,8 +154,6 @@ def gen_calendar(llm_out:dict, st)->None:
       key="timegrid",
       callbacks=[]
   )
-
-  #st.write(state)
   return state
 
 if __name__ == "__main__":

@@ -79,8 +79,7 @@ def generate(fix_plan:str, flex_plan:str, pref:str)->str:
 
     #First Question
     completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        response_format={ "type": "json_object" },
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": system},
             {"role": "user", "content": istream1}
@@ -88,9 +87,8 @@ def generate(fix_plan:str, flex_plan:str, pref:str)->str:
     )
 
     response1 = completion.choices[0].message.content
-    #print(response1)
 
-    #Second Question
+    #Second Question                    #ChatGPT generates more accurate results if we let it solve problems step by step
     completion = client.chat.completions.create(
         model="gpt-4o",
         response_format={ "type": "json_object" },

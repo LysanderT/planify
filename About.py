@@ -1,6 +1,3 @@
-#import streamlit as st
-
-
 def run(st):
     st.title("About Planify")
     st.markdown("""
