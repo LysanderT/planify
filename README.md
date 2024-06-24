@@ -1,6 +1,6 @@
 # Planify
 
-<img src="logo.svg" align="right" alt="Planify logo" width="150">
+<img src="images/logo.svg" align="right" alt="Planify logo" width="150">
 
 
 A smart and easy-to-use task manager powered by AI.

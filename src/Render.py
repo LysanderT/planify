@@ -1,10 +1,6 @@
 import streamlit as st
 from streamlit_calendar import calendar
-#from my_calendar import calendar
 import random as rd
-#import json
-
-# st.set_page_config(page_title="Demo for streamlit-calendar", page_icon="📆")
 
 # fake_data = '''
 # {

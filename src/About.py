@@ -2,7 +2,6 @@ import streamlit as st
 
 
 def run():
-    # st.title("About Planify")
     st.markdown("""
                 
     ## About Planify
@@ -22,7 +21,6 @@ def run():
 
     """)
 
-    # col1, _, _, col4 = st.columns(4)
     _, col2, _ = st.columns(3,vertical_alignment="center", gap = "large")
     if col2.button("Start Here!"):
         st.session_state.page = "Initial"

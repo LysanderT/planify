@@ -1,8 +1,8 @@
 import streamlit as st
 import json
 
-from Client import generate
-from Gen_page import gen_calendar
+from src.Client import generate
+from src.Render import gen_calendar
 
 def run():
     st.title("My Personal Plan")
@@ -31,18 +31,10 @@ def run():
             if activity["name"] == "":
                 continue
             else:
-                # unfixed.append({
-                #     activity["name"]: {
-                #         "importance": activity["importance"],
-                #         "hours": activity["duration"]
-                #     }
-                # })
                 unfixed[activity["name"]] = {
                     "importance": activity["importance"],
                     "hours": activity["duration"]
                 }
-
-        # st.json(unfixed)
 
     prefs = {}
     if "preferences" not in st.session_state:
@@ -51,7 +43,6 @@ def run():
         prefs = st.session_state.preferences
 
     planned_json = generate(json.dumps(schedule), json.dumps(unfixed), json.dumps(prefs))
-    # st.json(planned_json)
     gen_calendar(json.loads(planned_json))
 
     if st.button("Back"):
