@@ -1,6 +1,6 @@
-from openai import OpenAI
+import openai
 
-client = OpenAI()
+client = openai.OpenAI()
 
 def generate(fix_plan:str, flex_plan:str, pref:str)->str:
     system = '''
@@ -79,7 +79,7 @@ def generate(fix_plan:str, flex_plan:str, pref:str)->str:
 
     #First Question
     completion = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-3.5-turbo",
         response_format={ "type": "json_object" },
         messages=[
             {"role": "system", "content": system},
@@ -88,7 +88,7 @@ def generate(fix_plan:str, flex_plan:str, pref:str)->str:
     )
 
     response1 = completion.choices[0].message.content
-    # print(response1)
+    #print(response1)
 
     #Second Question
     completion = client.chat.completions.create(

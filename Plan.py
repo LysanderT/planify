@@ -1,17 +1,17 @@
-import streamlit as st
+import streamlit as stx
 import json
 
 from Client import generate
 from Gen_page import gen_calendar
 
-def run():
+def run(st):
     st.title("My Personal Plan")
 
     schedule = {}
-    if "initial_activities" not in st.session_state:
+    if "initial_activities" not in stx.session_state:
         pass
     else:
-        for activity in st.session_state.initial_activities:
+        for activity in stx.session_state.initial_activities:
             if activity["name"] == "":
                 continue
             else:
@@ -24,10 +24,10 @@ def run():
         # st.json(schedule)
 
     unfixed = {}
-    if "add_on_activities" not in st.session_state:
+    if "add_on_activities" not in stx.session_state:
         pass
     else:
-        for activity in st.session_state.add_on_activities:
+        for activity in stx.session_state.add_on_activities:
             if activity["name"] == "":
                 continue
             else:
@@ -44,16 +44,19 @@ def run():
 
         # st.json(unfixed)
 
-    prefs = {}
-    if "preferences" not in st.session_state:
-        pass
-    else:
-        prefs = st.session_state.preferences
+    # prefs = {}
+    # if "preferences" not in stx.session_state:
+    #     pass
+    # else:
+    #     prefs = stx.session_state.preferences
+    prefs = stx.session_state.preferences["pref"]
 
-    planned_json = generate(json.dumps(schedule), json.dumps(unfixed), json.dumps(prefs))
-    # st.json(planned_json)
-    gen_calendar(json.loads(planned_json))
+    #try:
+    planned_json = generate(json.dumps(schedule), json.dumps(unfixed), prefs)
+    gen_calendar(json.loads(planned_json), st)
+    # except:
+    #     pass
 
-    if st.button("Back"):
-        st.session_state.page = "Preferences"
-        st.experimental_rerun()
+    # if st.button("Back"):
+    #     stx.session_state.page = "Preferences"
+    #     stx.experimental_rerun()
